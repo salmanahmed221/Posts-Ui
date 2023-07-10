@@ -1,15 +1,8 @@
-import PostHeader from "@/components/PostHeader";
-import Posts from "@/components/Posts";
+import Auth from "@/components/Auth";
 
 function Home() {
   return <div >
-    <PostHeader />
-    {/* Post 1 */}
-    <Posts />
-    {/* Post 2 */}
-    <Posts />
-    {/* Post 3 */}
-    <Posts />
+    <Auth />
   </div>;
 }
 

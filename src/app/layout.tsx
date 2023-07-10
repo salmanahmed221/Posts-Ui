@@ -1,6 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Khula } from 'next/font/google'
+import { ClerkProvider } from '@clerk/nextjs'
+
 
 const khula = Khula({ subsets: ['latin'], weight: "400" })
 
@@ -16,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={khula.className}>{children}</body>
+      <ClerkProvider>
+        <body className={khula.className}>{children}</body>
+      </ClerkProvider>
     </html>
   )
 }
